@@ -1,23 +1,20 @@
-import logo from './logo.svg';
 import './App.css';
+import React, {useState} from 'react';
+import InputValues from './Components/InputValues'
+import LPP from './Components/LPP'
+import KMPSolution from './Components/KMPSolution'
 
 function App() {
+  const [substring, setSubstring] = useState("ababd");
+  const [string, setString] = useState("ababcabcabababd");
+  const [lppArr, setLppArr] = useState([]);
+
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+    <div className="App container mx-auto">
+      <h1 className="font-bold text-5xl mb-4">Substring Search</h1>
+      <InputValues setSubstring={setSubstring} substring={substring} string={string} setString={setString} />
+      <LPP substring={substring} lppArr={lppArr} setLppArr={setLppArr}/>
+      <KMPSolution string={string} lppArr={lppArr} substring={substring}/>
     </div>
   );
 }
