@@ -1,6 +1,11 @@
 import React, {useState, useEffect} from "react";
+import { useSelector } from 'react-redux'
 
-const KMPSolution = ({string, lppArr, substring}) => {
+const KMPSolution = () => {
+    const string = useSelector(state => state.string);
+    const substring = useSelector(state => state.substring.substringValue);
+    const lppArr = useSelector(state => state.substring.lpp);
+
     const [kmpArr, setKmpArr] = useState([]);
     const [numberSubs, setNumberSubs] = useState(0);
 
@@ -10,7 +15,7 @@ const KMPSolution = ({string, lppArr, substring}) => {
 
 
     function calculateAnswer() {
-        let currSub = 0;
+        let currSub = -1;
         let currStr = 0;
         const tempArr = new Array(string.length).fill(0);
         let tempNumSubs = 0;
@@ -26,7 +31,7 @@ const KMPSolution = ({string, lppArr, substring}) => {
                     }
                 }
             }
-            else if (currSub > 0)  {
+            else if (currSub > -1)  {
                 currSub = lppArr[currSub]
             }
             else currStr++
@@ -36,7 +41,7 @@ const KMPSolution = ({string, lppArr, substring}) => {
     }
 
     function kmtClassName(ix) {
-        const alwaysInclude = "w-3 px-3 m-1";
+        const alwaysInclude = "w-6 px-2 m-1";
 
         if(kmpArr[ix] === 1) return `${alwaysInclude} bg-purple-200`;
         return `${alwaysInclude} bg-blue-200`;
@@ -50,7 +55,7 @@ const KMPSolution = ({string, lppArr, substring}) => {
                 <div key={ix} className={kmtClassName(ix)}>{kmpValue}</div>
             ))}
         </div>
-        <p className="mt-2">Number of substrings in main: <span className="font-bold">{numberSubs}</span></p>
+        <p className="mt-2">Number of substrings in string: <span className="font-bold">{numberSubs}</span></p>
         </>
     )
 }
