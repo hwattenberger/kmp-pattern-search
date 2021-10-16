@@ -38,9 +38,9 @@ Help visualize the KMT algorithm.
 
 ## 🏁 Live Example <a name = "example"></a>
 See this image for workflow (coming soon!):
-<!-- <img width=800px src="https://hilary-wattenberger.netlify.app/images/SpotifyProject2.gif" alt="Sample workflow"> -->
+<img width=600px src="https://hilary-wattenberger.netlify.app/images/Substring KMT Search Still Image.png" alt="Sample workflow">
 <br>
-You can access the live application here: https://hwattenberger-schedulingapp.netlify.app/schedule <br><br>
+You can access the live application here: https://hwattenberger-kmt-search.netlify.app/ <br><br>
 
 ## 🎈 What did I learn? <a name="learnings"></a>
 - Was fun to iterate through a loop by clicking a button step by step
