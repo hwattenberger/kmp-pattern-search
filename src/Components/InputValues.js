@@ -26,7 +26,6 @@ const InputValues = () => {
                 String:
                 <input type="text" name="string" value={string} onChange={handleStrChange} className="p-1 ml-1 mr-1 border border-gray-300 focus:border-gray-700 rounded"></input>
             </label>
-            {/* <button className="ml-2 border-2 border-purple-500 hover:border-gray-500 px-2">Go</button> */}
         </div>
     )
 }
