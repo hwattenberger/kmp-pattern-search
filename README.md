@@ -37,7 +37,7 @@ Help visualize the KMT algorithm.
 - Shows the KMT solution
 
 ## 🏁 Live Example <a name = "example"></a>
-See this image for workflow (coming soon!):
+Here's what it looks like:
 <img width=600px src="https://hilary-wattenberger.netlify.app/images/Substring KMT Search Still Image.png" alt="Sample workflow">
 <br>
 You can access the live application here: https://hwattenberger-kmt-search.netlify.app/ <br><br>
